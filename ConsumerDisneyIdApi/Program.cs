@@ -19,12 +19,11 @@ response.EnsureSuccessStatusCode();
 
 string respostaApi= await response.Content.ReadAsStringAsync();
 
-Data? idapi = System.Text.Json.JsonSerializer.Deserialize<Data>(respostaApi);
+RespostaDisney? idapi = System.Text.Json.JsonSerializer.Deserialize<RespostaDisney>(respostaApi);
 
-WriteLine($"\nNome do personagem: {idapi?.name}");
-WriteLine($"Url da imagem:  {idapi?.imageUrl}");
+WriteLine($"\nNome do personagem: {idapi?.data?.name}");
+WriteLine($"Url da imagem:  {idapi?.data?.imageUrl}");
 
-    
 }   
 
 catch (Exception ex)

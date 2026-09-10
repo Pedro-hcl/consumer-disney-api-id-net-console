@@ -7,8 +7,10 @@ namespace ConsumerDisneyIdApi.Models
 {
 
 
-    public class Data
+    public class RespostaDisney
     {
+        public Character? data { get; set; }
+    }
     
     public class Character
     {
@@ -16,5 +18,4 @@ namespace ConsumerDisneyIdApi.Models
 
         public string? imageUrl { get; set; }
     }
-}
 }
